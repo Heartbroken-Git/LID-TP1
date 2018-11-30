@@ -1,4 +1,5 @@
 import certstream
+import LID_tests as Ltests
 
 def retrieveOneDomain_callback(message, context):
 
@@ -13,7 +14,8 @@ def retrieveOneDomain_callback(message, context):
             return
 
         targetDomain = allDomains[0]
-        print("LID_event_retrieval.py > Retrieved "+ targetDomain)
+        print("LID_event_retrieval.py > Retrieved " + targetDomain)
+        Ltests.doTests(targetDomain)
 
 def connectFireHose(requestedType):
 
