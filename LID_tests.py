@@ -49,10 +49,8 @@ def testBuzzword(urlToTest):
 
 
 	for line in file:
-		print(line)
 		lineArray = line.split(': ')
 		for subdomain in urlToTest.split('.'):
-			print(subdomain)
 			if subdomain == lineArray[0]:
 				grade = grade + lineArray[1]
 
@@ -81,10 +79,10 @@ def doTests(urlToTest):
 		print("<green>LID_tests.py > DEBUG : " + urlToTest + " in scope</green>")
 		print("LID_tests.py > DEBUG : Beginning buzzword testing")
 		buzzwordGrade = testBuzzword(urlToTest)
-		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " graded " + buzzwordGrade + " in buzzword testing</bold>")
+		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " graded " + str(buzzwordGrade) + " in buzzword testing</bold>")
 		print("LID_tests.py > DEBUG : Beginning whois testing")
 		whoisGrade = testWhois(originalDomain, urlToTest)
-		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " graded " + whoisGrade + "</bold>")
+		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " graded " + str(whoisGrade) + "</bold>")
 
 	else:
 		print("<red>LID_tests.py > DEBUG : " + urlToTest + " not in scope</red>")
