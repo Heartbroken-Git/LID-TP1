@@ -1,7 +1,8 @@
 import whois
 from ansimarkup import ansiprint as print
 import LID_sequence_matcher as LseqMatch
-#require pip install whois
+import LID_stixIntegration as Lstix
+
 def LIDwhois(domain):
 	_domain = whois.whois(domain)
 	_creation = _domain.creation_date
@@ -91,6 +92,9 @@ def doTests(urlToTest):
 
 		finalGrade = finalGrading(ratio, buzzwordGrade, hyphenGrade, dotsGrade)
 		print("<bold>LID_tests.py > DEBUG : "+ urlToTest+ "\'s final grade is "+ str(finalGrade) + "</bold>")
+
+		if finalGrade >= 20.0:
+			Lstix.writeStix(urlToTest, finalGrade)
 
 	else:
 		# print("<red>LID_tests.py > DEBUG : " + urlToTest + " not in scope</red>")

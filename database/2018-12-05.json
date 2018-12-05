@@ -1,0 +1,98 @@
+{
+    "type": "bundle",
+    "id": "bundle--f6af938f-83fd-4e14-b238-eac3de565a13",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--0a37da24-35c3-42ad-abf3-519bc61cfb00",
+            "created": "2018-12-05T00:00:00.000Z",
+            "modified": "2018-12-05T17:16:17.597Z",
+            "name": "Malicious site (phishing)",
+            "description": "Possible malicious site detected by LID-TP1 with a score of 1.4285714285714346, shady url : intrustmrm.com",
+            "pattern": "[url:value = 'intrustmrm.com']",
+            "valid_from": "2018-12-05T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--98bdd435-ccef-4db8-9dd8-f61e9f4e4b5e",
+            "created": "2018-12-05T00:00:00.000Z",
+            "modified": "2018-12-05T17:16:40.063Z",
+            "name": "Malicious site (phishing)",
+            "description": "Possible malicious site detected by LID-TP1 with a score of 3.68421052631579, shady url : liaike.com",
+            "pattern": "[url:value = 'liaike.com']",
+            "valid_from": "2018-12-05T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--d371ffc7-acba-4a5c-827b-b481ecea34fc",
+            "created": "2018-12-05T00:00:00.000Z",
+            "modified": "2018-12-05T17:16:45.944Z",
+            "name": "Malicious site (phishing)",
+            "description": "Possible malicious site detected by LID-TP1 with a score of 0.0, shady url : 2voce.com",
+            "pattern": "[url:value = '2voce.com']",
+            "valid_from": "2018-12-05T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--84b60891-f811-4a4d-ba99-25b7469e226b",
+            "created": "2018-12-05T00:00:00.000Z",
+            "modified": "2018-12-05T17:16:49.227Z",
+            "name": "Malicious site (phishing)",
+            "description": "Possible malicious site detected by LID-TP1 with a score of 0.0, shady url : lifeaba.com",
+            "pattern": "[url:value = 'lifeaba.com']",
+            "valid_from": "2018-12-05T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--b26dc43d-5722-48a0-9338-9b15fcd53180",
+            "created": "2018-12-05T00:00:00.000Z",
+            "modified": "2018-12-05T17:16:52.359Z",
+            "name": "Malicious site (phishing)",
+            "description": "Possible malicious site detected by LID-TP1 with a score of 2.0000000000000018, shady url : en.tinimall.com",
+            "pattern": "[url:value = 'en.tinimall.com']",
+            "valid_from": "2018-12-05T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--1217e327-7984-4ecd-9040-59054bbb0733",
+            "created": "2018-12-05T00:00:00.000Z",
+            "modified": "2018-12-05T17:16:52.605Z",
+            "name": "Malicious site (phishing)",
+            "description": "Possible malicious site detected by LID-TP1 with a score of 0.0, shady url : liftrei.com",
+            "pattern": "[url:value = 'liftrei.com']",
+            "valid_from": "2018-12-05T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--055f3289-5ac5-4d19-9927-1ab710141e83",
+            "created": "2018-12-05T00:00:00.000Z",
+            "modified": "2018-12-05T17:16:54.125Z",
+            "name": "Malicious site (phishing)",
+            "description": "Possible malicious site detected by LID-TP1 with a score of 0.5882352941176561, shady url : seknd.com",
+            "pattern": "[url:value = 'seknd.com']",
+            "valid_from": "2018-12-05T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        }
+    ]
+}
