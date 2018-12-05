@@ -70,6 +70,18 @@ def testInScope(urlToTest):
 
 	return maxProbableDomain, maxRatio
 
+def testManyWeirdChar(urlToTest, weirdChar):
+
+	nbChar = 0
+
+	for char in urlToTest:
+		if char == weirdChar:
+			nbChar += 1
+
+		if nbChar >= 3:
+			return True
+
+	return False
 
 def doTests(urlToTest):
 
@@ -77,9 +89,19 @@ def doTests(urlToTest):
 	if ratio >= 0.7:
 
 		print("<green>LID_tests.py > DEBUG : " + urlToTest + " in scope</green>")
+
 		print("LID_tests.py > DEBUG : Beginning buzzword testing")
 		buzzwordGrade = testBuzzword(urlToTest)
 		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " graded " + str(buzzwordGrade) + " in buzzword testing</bold>")
+
+		print("LID_tests.py > DEBUG : Beginning hyphen testing")
+		hyphenGrade = testManyWeirdChar(urlToTest, '-')
+		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " has many hyphens ? " + str(hyphenGrade) + "</bold>")
+
+		print("LID_tests.py > DEBUG : Beginning dot testing")
+		dotsGrade = testManyWeirdChar(urlToTest, '.')
+		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " has many dots ? " + str(dotsGrade) + "</bold>")
+
 		print("LID_tests.py > DEBUG : Beginning whois testing")
 		whoisGrade = testWhois(originalDomain, urlToTest)
 		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " graded " + str(whoisGrade) + "</bold>")
