@@ -55,6 +55,21 @@ def testManyWeirdChar(urlToTest, weirdChar):
 
 	return False
 
+def finalGrading(resemblanceRatio, buzzwordGrade, hasManyHyphens, hasManyDots):
+	finalGrade = 0
+
+	finalGrade += (resemblanceRatio - 0.7) * 100
+
+	finalGrade += buzzwordGrade
+
+	if hasManyHyphens:
+		finalGrade += 10
+
+	if hasManyDots:
+		finalGrade += 20
+
+	return finalGrade
+
 def doTests(urlToTest):
 
 	originalDomain, ratio = testInScope(urlToTest)
@@ -74,7 +89,9 @@ def doTests(urlToTest):
 		dotsGrade = testManyWeirdChar(urlToTest, '.')
 		print("<bold>LID_tests.py > DEBUG : " + urlToTest + " has many dots ? " + str(dotsGrade) + "</bold>")
 
+		finalGrade = finalGrading(ratio, buzzwordGrade, hyphenGrade, dotsGrade)
+		print("<bold>LID_tests.py > DEBUG : "+ urlToTest+ "\'s final grade is "+ str(finalGrade) + "</bold>")
 
 	else:
-		print("<red>LID_tests.py > DEBUG : " + urlToTest + " not in scope</red>")
+		# print("<red>LID_tests.py > DEBUG : " + urlToTest + " not in scope</red>")
 		return
